@@ -2,13 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 
-
-
 struct Computador {
     int codigo;
     char modelo[50];
     float preco;
-} ;
+};
 
 typedef struct Computador * p_comp;
 
@@ -28,12 +26,12 @@ int main(int argc, char const *argv[])
     strcpy(vet[0]->modelo, "Coca cola");
     vet[0]->preco = 2.68;
 
-    vet[0] = (p_comp) malloc(sizeof(struct Computador));
-    vet[0]->codigo = 2;
-    strcpy(vet[0]->modelo, "Fanta");
-    vet[0]->preco = 2.68;
+    vet[1] = (p_comp) malloc(sizeof(struct Computador));
+    vet[1]->codigo = 2;
+    strcpy(vet[1]->modelo, "Fanta");
+    vet[1]->preco = 2.68;
 
-    procurar(vet, 2, 2);
+    procurar(vet, 3, 2);
     return 0;
 }
 
